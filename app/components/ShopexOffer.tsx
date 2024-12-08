@@ -3,19 +3,19 @@ const ShopexOffer = () => {
       {
         id: 1,
         icon: "/free-delivery.svg",
-        title: '24/7 Support',
+        title: 'Free Delivery',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.',
       },
       {
         id: 2,
         icon: "/cashback-1.svg",
-        title: '24/7 Support',
+        title: '100% Cash Back',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.',
       },
       {
         id: 3,
         icon: "/premium-quality.svg",
-        title: '24/7 Support',
+        title: 'Quality Product',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.',
       },
       {

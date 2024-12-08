@@ -55,6 +55,7 @@ export default function Navbar(){
                         </Link>
                         </div>
                         <div><Link href={''}>Pages</Link></div>
+                        <div><Link href={'/about'}>About</Link></div>
                         <div><Link href={''}>Products</Link></div>
                         <div><Link href={''}>Blog</Link></div>
                         <div><Link href={''}>Shop</Link></div>
