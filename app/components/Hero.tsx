@@ -3,7 +3,7 @@ export default function Hero() {
   return (
     <>
       <div className="w-full bg-[#F2F0FF]">
-        <div className="flex  w-[95%] mx-auto max-w-[1900px]">
+        <div className="flex w-[95%] mx-auto max-w-[1900px]">
           <div>
             <img src="lamp-hero.png" alt="" />
           </div>

@@ -2,10 +2,10 @@ import React from "react";
 
 const DiscountItem: React.FC = () => {
   return (
-    <div className="w-full">
+    <div className="w-full mt-16">
       <div className="w-[95%] mx-auto max-w-[1400px]">
         <div className="mx-auto text-center">
-          <h1 className="text-3xl font-extrabold mb-4 josefin-sans text-[#151875]">Discount Item</h1>
+          <h1 className="text-4xl font-extrabold mb-4 josefin-sans text-[#151875]">Discount Item</h1>
           <div className="flex justify-center gap-4 text-lg text-pink-600 font-medium mb-8">
             <a href="#" className="hover:underline">
               Wood Chair
@@ -14,7 +14,7 @@ const DiscountItem: React.FC = () => {
             <a href="#" className="hover:underline">
               Plastic Chair
             </a>
-            <span className="text-[#151875]">•</span>
+            <span className="font-extrabold text-4xl josefin-sans text-[#151875]">•</span>
             <a href="#" className="hover:underline">
               Sofa Collection
             </a>
@@ -24,7 +24,7 @@ const DiscountItem: React.FC = () => {
             {/* Left Section */}
 
             <div className="md:w-1/2 text-left">
-              <h2 className="text-4xl font-bold mb-2 josefin-sans text-[#151875]">
+              <h2 className="text-4xl font-extrabold mb-2 josefin-sans text-[#151875]">
                 20% Discount Of All Products
               </h2>
               <h3 className="text-[#FB2E86] text-2xl font-semibold mb-6">

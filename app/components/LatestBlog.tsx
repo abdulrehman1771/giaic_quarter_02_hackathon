@@ -9,7 +9,7 @@ const LatestBlog = () => {
       title: "Top essential Trends in 2021",
       content:
         "More off this less hello samlande lied much over tightly circa horse taped mightly",
-      image: "/path-to-image-1.jpg", // Replace with actual paths
+      image: "/top-1.jpeg", // Replace with actual paths
       link: "#",
     },
     {
@@ -19,7 +19,7 @@ const LatestBlog = () => {
       title: "Top essential trends in 2021",
       content:
         "More off this less hello samlande lied much over tightly circa horse taped mightly",
-      image: "/path-to-image-2.jpg",
+      image: "/top-2.jpeg",
       link: "#",
     },
     {
@@ -29,14 +29,17 @@ const LatestBlog = () => {
       title: "Top essential Trends in 2021",
       content:
         "More off this less hello samlande lied much over tightly circa horse taped mightly",
-      image: "/path-to-image-3.jpg",
+      image: "/top-3.jpeg",
       link: "#",
     },
   ];
 
   return (
+    <div className="w-full">
+    <div className="flex w-[95%] mx-auto max-w-[1400px]">
+
     <div className="py-16 bg-white">
-      <h2 className="text-center text-3xl font-bold text-blue-900 mb-8">
+      <h2 className="text-center text-4xl font-extrabold josefin-sans text-[#151875] mb-8">
         Latest Blog
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 md:px-16">
@@ -44,7 +47,7 @@ const LatestBlog = () => {
           <div
             key={blog.id}
             className={`relative bg-white shadow-md rounded-lg overflow-hidden ${
-              index === 0 ? "border-2 border-pink-500" : "border"
+              index === 0 ? "" : ""
             }`}
           >
             <img
@@ -57,7 +60,7 @@ const LatestBlog = () => {
                 <span className="mr-2">✍️ {blog.author}</span>
                 <span>📅 {blog.date}</span>
               </div>
-              <h3 className="text-xl font-semibold text-blue-900 mb-4">
+              <h3 className="text-xl font-semibold text-[#151875] mb-4">
                 {blog.title}
               </h3>
               <p className="text-gray-600 mb-4">{blog.content}</p>
@@ -72,6 +75,10 @@ const LatestBlog = () => {
         ))}
       </div>
     </div>
+
+    </div>
+    </div>
+
   );
 };
 

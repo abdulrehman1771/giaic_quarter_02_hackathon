@@ -36,7 +36,7 @@ const TopCategories = () => {
     <div className="w-full mt-16">
       <div className="flex w-[95%] mx-auto justify-center max-w-[1400px]">
         <div className="text-center py-8">
-          <h2 className="text-4xl font-extrabold mb-6 joesfin-sans tex-[#151875]">Top Categories</h2>
+          <h2 className="text-4xl font-extrabold mb-6 joesfin-sans text-[#151875]">Top Categories</h2>
           <div className="flex flex-wrap justify-center space-x-4">
             {categories.map((category) => (
               <div
@@ -46,7 +46,7 @@ const TopCategories = () => {
                 <div
                   className={`border-4 rounded-full ${
                     category.shopButton
-                      ? "border-purple-500"
+                      ? ""
                       : "border-gray-200"
                   } p-4`}
                 >

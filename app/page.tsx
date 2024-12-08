@@ -6,6 +6,8 @@ import Image from "next/image";
 import TrendingProducts from "./components/TrendingProducts";
 import DiscountItem from "./components/DiscountedItem";
 import TopCategories from "./components/TopCategories";
+import LatestBlog from "./components/LatestBlog";
+import Footer from "./components/Footer";
 
 
 export default function Home() {
@@ -75,6 +77,8 @@ export default function Home() {
       <div className="weWorkWith h-28 w-full mx-auto"></div>
     </div>
     </div>
+
+    <LatestBlog/>
    </>
   );
 }
