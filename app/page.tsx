@@ -72,7 +72,6 @@ export default function Home() {
 
     <div className="w-full my-16">
     <div className="h-[100%] w-[90%] flex items-center max-w-[1400px] mx-auto">
-      
       <div className="weWorkWith h-28 w-full mx-auto"></div>
     </div>
     </div>
