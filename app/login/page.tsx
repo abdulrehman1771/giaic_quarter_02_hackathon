@@ -15,9 +15,6 @@ export default function Login() {
                 <div>
                   <Link href={"/"}>Home</Link>
                 </div>
-                <div>
-                  <Link href={"/"}>. Pages</Link>
-                </div>
                 <div className="text-[#FB2E86]">
                   <p>. My Account</p>
                 </div>
