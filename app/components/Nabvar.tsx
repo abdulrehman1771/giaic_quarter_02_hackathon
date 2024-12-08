@@ -1,5 +1,5 @@
 import Image from "next/image"
-
+import Link from "next/link"
 
 export default function Navbar(){
     return(
@@ -26,8 +26,10 @@ export default function Navbar(){
                         <Image className="" src="icon-down.svg" width={15} height={15} alt="icon-down"></Image>
                     </div>
                     <div className="flex items-center gap-1">
+                        <Link className="flex items-center gap-1" href={'/login'}>
                         <p>Login</p>
                         <Image src="user.svg" width={20} height={20} alt="icon-down"></Image>
+                        </Link>
                     </div>
                     <div className="flex items-center gap-1">
                         <p>Whitelist</p>
@@ -48,14 +50,15 @@ export default function Navbar(){
                     </div>
                     <div className="flex text-black items-center gap-8">
                         <div className="flex gap-1">
-                        Home
+                        <Link className="flex gap-1" href={'/'}>Home
                         <Image className="" src="icon-down-black.svg" width={10} height={10} alt="icon-down"></Image>
+                        </Link>
                         </div>
-                        <div>Pages</div>
-                        <div>Products</div>
-                        <div>Blog</div>
-                        <div>Shop</div>
-                        <div>Contact</div>
+                        <div><Link href={''}>Pages</Link></div>
+                        <div><Link href={''}>Products</Link></div>
+                        <div><Link href={''}>Blog</Link></div>
+                        <div><Link href={''}>Shop</Link></div>
+                        <div><Link href={''}>Contact</Link></div>
                     </div>
                     <div className="flex text-black">
                         <div className="border-t-2 border-l-2 border-b-2 border-gray-300 ">
