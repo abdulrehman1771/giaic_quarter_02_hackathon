@@ -47,6 +47,7 @@ const LatestProducts = () => {
     ];
   
     return (
+      <>
       <div className="py-12">
         <h2 className="text-4xl font-extrabold text-center mb-8 text-indigo-900">
           <span className="relative inline-block">
@@ -82,6 +83,8 @@ const LatestProducts = () => {
           ))}
         </div>
       </div>
+      </>
+
     );
   };
   

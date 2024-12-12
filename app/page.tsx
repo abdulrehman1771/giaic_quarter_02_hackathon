@@ -7,10 +7,13 @@ import TrendingProducts from "./components/TrendingProducts";
 import DiscountItem from "./components/DiscountedItem";
 import TopCategories from "./components/TopCategories";
 import LatestBlog from "./components/LatestBlog";
-import Footer from "./components/Footer";
+
+
+
 
 
 export default function Home() {
+
   return (
    <>
    <Hero />
@@ -79,6 +82,13 @@ export default function Home() {
     </div>
 
     <LatestBlog/>
+
+
+
+
+    <div className="mx-auto">
+        
+    </div>
    </>
   );
 }

@@ -35,10 +35,10 @@ const LatestBlog = () => {
   ];
 
   return (
-    <div className="w-full">
+    <div className="w-full overflow-hidden">
     <div className="flex w-[95%] mx-auto max-w-[1400px]">
 
-    <div className="py-16 bg-white">
+    <div className="mx-auto py-16 bg-white">
       <h2 className="text-center text-4xl font-extrabold josefin-sans text-[#151875] mb-8">
         Latest Blog
       </h2>

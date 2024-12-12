@@ -1,5 +1,4 @@
 import Link from "next/link";
-import ShopexOffer from "../components/ShopexOffer";
 
 export default function About() {
   const offers = [
