@@ -27,6 +27,7 @@ export default function Login() {
           <div className="w-[90%] max-w-[1400px] mx-auto"></div>
         </div>
 
+
         <LoginForm />
 
         <div className="w-full my-16">

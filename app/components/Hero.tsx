@@ -1,11 +1,12 @@
-
+import Image from "next/image";
 export default function Hero() {
   return (
     <>
       <div className="w-full bg-[#F2F0FF]">
         <div className="flex w-[95%] mx-auto max-w-[1900px]">
-          <div>
-            <img src="lamp-hero.png" alt="" />
+          <div className="relative">
+            {/* <img src="lamp-hero.png" alt="" /> */}
+            <Image src="/lamp-hero.png" width={20} height={20} className="relative top-0 scale-75" layout="responsive" alt=""></Image>
           </div>
           <div className=" self-center">
             <div className="text-xl text-[#FB2E86] leading-[5rem]">
@@ -24,10 +25,11 @@ export default function Hero() {
               <button className=" px-9 py-3  bg-[#FB2E86]">Shop Now</button>
             </div>
           </div>
-          <div className=" self-center">
-            <div>
-              <img className="w-[629px]" src="sofa-hero.png" alt="" />
-            </div>
+          <div className="flex items-center">
+            
+              {/* <img className="w-[629px]" src="sofa-hero.png" alt="" /> */}
+            <Image className="mt-5" src="/sofa-hero.png" width={20} height={20} layout="responsive" alt=""></Image>
+            
           </div>
         </div>
 
