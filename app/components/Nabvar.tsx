@@ -113,7 +113,7 @@ export default function Navbar() {
           <div className="sm:hidden">
             <button type="button" title="hamburger">
               <GiHamburgerMenu
-                className=" fill-black"
+                className="fill-black"
                 onClick={toggleSideBar}
               />
             </button>
@@ -121,7 +121,7 @@ export default function Navbar() {
               className={
                 sideBar
                   ? "hidden"
-                  : "transition-all visible absolute flex w-[70%] h-[100vh] translate-x-4  top-0 right-0 z-10 bg-[#FB2E86]"
+                  : "transition-all visible absolute flex w-[70%] h-[100vh] translate-x-4  top-0 right-[15px] z-10 bg-[#FB2E86]"
               }
             >
               <button title="close Menu">
