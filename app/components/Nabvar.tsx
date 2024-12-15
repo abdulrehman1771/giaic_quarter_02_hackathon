@@ -13,7 +13,7 @@ import { useState } from "react";
 import { MdClose } from "react-icons/md";
 
 export default function Navbar() {
-  const [sideBar, setSideBar] = useState(false);
+  const [sideBar, setSideBar] = useState(true);
 
   const toggleSideBar = () => {
     setSideBar(!sideBar);
