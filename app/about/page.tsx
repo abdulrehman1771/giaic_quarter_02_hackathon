@@ -39,7 +39,7 @@ export default function About() {
           <div className="w-[90%] max-w-[1400px] mx-auto">
             <div className="h-[286px] flex flex-col justify-center">
               <h1 className="josefin-sans text-4xl font-extrabold text-[#101750]">
-                My Account
+                About Us
               </h1>
               <div className="flex gap-1 font-medium">
                 <div>
