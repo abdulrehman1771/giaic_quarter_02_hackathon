@@ -131,7 +131,7 @@ export default function Navbar() {
                 />
               </button>
               <div className="flex flex-col gap-4 mt-16 ml-7 text-xl">
-                <div className="flex gap-1 hover:text-[#FB2E86]">
+                <div className="flex gap-1">
                   <Link className="flex items-center" href={"/"}>
                     Home
                   </Link>
