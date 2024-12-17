@@ -1,5 +1,7 @@
 import React from "react";
-import Image from "next/image";
+import { FaFacebook } from "react-icons/fa";
+import { RiInstagramFill } from "react-icons/ri";
+import { FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -80,21 +82,24 @@ const Footer = () => {
         <div>
             <p>&#169;Webecy - All Rights Reserved</p>
         </div>
-        <div className="flex gap-3">
-            <div>
-                <Image src='icon-facebook.svg' width={20} height={20} alt=""></Image>
+        <div className="flex gap-3 items-center justify-between">
+            <div className="mr-1">
+                {/* <Image src='icon-facebook.svg' width={20} height={20} alt=""></Image> */}
+                <FaFacebook className="fill-[#151875] scale-[175%]"/>
             </div>
-            <div>
-                <Image src='icon-instagram.svg' width={20} height={20} alt=""></Image>
+            <div className="rounded-full bg-[#151875] w-7 h-7 flex items-center justify-center">
+                {/* <Image src='icon-instagram.svg' width={20} height={20} alt=""></Image> */}
+                    <RiInstagramFill className="fill-white"/>                  
             </div>
-            <div>
-                <Image src='icon-twitter.svg' width={20} height={20} alt=""></Image>
+            <div className="rounded-full bg-[#151875] w-7 h-7 flex items-center justify-center">
+                {/* <Image src='icon-twitter.svg' width={20} height={20} alt=""></Image> */}
+                <FaTwitter className="fill-white"/>
             </div>
         </div>
     </div>
     </div>
     </>
   );
-};
+}
 
 export default Footer;
