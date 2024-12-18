@@ -121,7 +121,7 @@ export default function Navbar() {
               className={
                 sideBar
                   ? "hidden"
-                  : "transition-all visible absolute flex w-[70%] h-[100vh] translate-x-4  top-0 right-[15px] z-10 bg-[#FB2E86]"
+                  : "transition-all ease-in-out visible fixed flex w-[70%] h-[100vh] translate-x-4  top-0 right-[15px] z-10 bg-[#FB2E86]"
               }
             >
               <button title="close Menu">
