@@ -1,0 +1,85 @@
+[{
+    "id": 1,
+    "prodName": "Vel elit euismod",
+    "discountedPrice": "$26.00",
+    "originalPrice": "$42.00",
+    "photo": "/gridPhoto1.png"
+  },
+  {
+    "id": 2,
+    "prodName": "Ultricies condimentum imperdiet",
+    "discountedPrice": "$26.00",
+    "originalPrice": "$42.00",
+    "photo": "/gridPhoto2.png"
+  },
+  {
+    "id": 3,
+    "prodName": "Vitae suspendisse sed",
+    "discountedPrice": "$26.00",
+    "originalPrice": "$42.00",
+    "photo": "/gridPhoto3.png"
+  },
+  {
+    "id": 4,
+    "prodName": "Sed at fermentum",
+    "discountedPrice": "$26.00",
+    "originalPrice": "$42.00",
+    "photo": "/gridPhoto4.png"
+  },
+  {
+    "id": 5,
+    "prodName": "Fusce pellentesque at",
+    "discountedPrice": "$26.00",
+    "originalPrice": "$42.00",
+    "photo": "/gridPhoto5.png"
+  },
+  {
+    "id": 6,
+    "prodName": "Vestibulum magna laoreet",
+    "discountedPrice": "$26.00",
+    "originalPrice": "$42.00",
+    "photo": "/gridPhoto6.png"
+  },
+  {
+    "id": 7,
+    "prodName": "Sollicitudin amet orci",
+    "discountedPrice": "$26.00",
+    "originalPrice": "$42.00",
+    "photo": "/gridPhoto7.png"
+  },
+  {
+    "id": 8,
+    "prodName": "Ultrices mauris sit",
+    "discountedPrice": "$26.00",
+    "originalPrice": "$42.00",
+    "photo": "/gridPhoto8.png"
+  },
+  {
+    "id": 9,
+    "prodName": "Pellentesque condimentum ac",
+    "discountedPrice": "$26.00",
+    "originalPrice": "$42.00",
+    "photo": "/gridPhoto9.png"
+  },
+  {
+    "id": 10,
+    "prodName": "Cras scelerisque velit",
+    "discountedPrice": "$26.00",
+    "originalPrice": "$42.00",
+    "photo": "/gridPhoto10.png"
+  },
+  {
+    "id": 11,
+    "prodName": "Lectus vulputate faucibus",
+    "discountedPrice": "$26.00",
+    "originalPrice": "$42.00",
+    "photo": "/gridPhoto11.png"
+  },
+  {
+    "id": 12,
+    "prodName": "Purus risus, ut",
+    "discountedPrice": "$26.00",
+    "originalPrice": "$42.00",
+    "photo": "/gridPhoto12.png"
+  }
+]

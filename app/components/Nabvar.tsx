@@ -68,7 +68,7 @@ export default function Navbar() {
       </div>
 
       <div className="w-full h-[80px] ">
-        <div className="flex items-center justify-between h-[100%] w-[90%] max-w-[1400px] mx-auto text-white font-medium">
+        <div className="flex items-center gap-4 justify-between h-[100%] w-[90%] max-w-[1400px] mx-auto text-white font-medium">
           <div className="navHead text-black text-4xl">
             <h1>Hekto</h1>
           </div>
@@ -83,29 +83,29 @@ export default function Navbar() {
               <Link href={"/about"}>About</Link>
             </div>
             <div className="hover:text-[#FB2E86]">
-              <Link href={""}>Products</Link>
+              <Link href={"/shop/shop_list"}>Products</Link>
             </div>
             <div className="hover:text-[#FB2E86]">
               <Link href={""}>Blog</Link>
             </div>
             <div className="hover:text-[#FB2E86]">
-              <Link href={""}>Shop</Link>
+              <Link href={"/shop"}>Shop</Link>
             </div>
             <div className="hover:text-[#FB2E86]">
               <Link href={""}>Contact</Link>
             </div>
           </div>
-          <div className="hidden sm:visible sm:flex scale-50 md:scale-75 lg:scale-100 text-black">
+          <div className="hidden sm:visible sm:flex  text-black">
             <div className="sm:border-t-2 sm:border-l-2 sm:border-b-2 sm:border-gray-300 ">
               <input
-                className="lg:w-[327px] h-12"
+                className="w-full lg:max-w-[317px] h-[39px]"
                 type="text"
                 title="search"
                 name="search"
                 id=""
               />
             </div>
-            <div className="bg-[#FB2E86] w-12 flex items-center justify-center">
+            <div className="bg-[#FB2E86] w-[30%] flex items-center justify-center">
               <FiSearch className="stroke-white scale-150" />
             </div>
           </div>
@@ -124,7 +124,7 @@ export default function Navbar() {
                   : "transition-all ease-in-out visible fixed flex w-[70%] h-full translate-x-4  top-0 right-[15px] z-10 bg-[#FB2E86]"
               }
             >
-              <button title="close Menu">
+              <button type="button" title="close Menu">
                 <MdClose
                   className="absolute right-10 top-5 fill-white scale-150"
                   onClick={toggleSideBar}
@@ -137,19 +137,19 @@ export default function Navbar() {
                   </Link>
                 </div>
                 <div className="">
-                  <Link href={"/about"}>About</Link>
+                  <Link href="/about">About</Link>
                 </div>
                 <div className="">
-                  <Link href={""}>Products</Link>
+                  <Link href="/shop/shop_list">Products</Link>
                 </div>
                 <div className="">
-                  <Link href={""}>Blog</Link>
+                  <Link href="">Blog</Link>
                 </div>
                 <div className="">
-                  <Link href={""}>Shop</Link>
+                  <Link href="/shop">Shop</Link>
                 </div>
                 <div className="">
-                  <Link href={""}>Contact</Link>
+                  <Link href="">Contact</Link>
                 </div>
               </div>
             </div>

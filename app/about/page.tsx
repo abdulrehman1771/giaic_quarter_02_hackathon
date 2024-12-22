@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import Image from "next/image";
 
 
 export default function About() {
@@ -56,19 +56,25 @@ export default function About() {
         </div>
 
         <div className="w-[90%] max-w-[1400px] mx-auto">
-          <div className="bg-white overflow-hidden flex items-center mt-48">
-            <div className="w-1/2">
-              <img
+          <div className="overflow-hidden flex items-center mt-48">
+            <div className="relative w-1/2 h-96 rounded-xl">
+              <Image
                 src="/about-img.jpeg"
                 alt="Business Meeting"
-                className="object-cover h-96 w-full rounded-lg"
-              />
+                // sizes="100%"
+                // width={200}
+                // height={200}
+                objectFit="cover"
+                layout="fill"
+                objectPosition=" 0% 40%"
+                className="w-full rounded-lg"
+              ></Image>
             </div>
             <div className="w-1/2 p-8">
-              <h1 className="text-4xl font-extrabold text-[#101750] josefin-sans mb-4">
+              <h1 className="text-4xl font-extrabold text-[#151875] josefin-sans mb-4">
                 Know About Our Ecommerce Business, History
               </h1>
-              <p className="text-gray-600 mb-6">
+              <p className="text-[#8A8FB9] mb-16">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis
                 neque ultrices mattis aliquam, malesuada diam est. Malesuada sem
                 tristique amet erat vitae eget dolor lobortis. Accumsan faucibus
@@ -76,7 +82,7 @@ export default function About() {
               </p>
               <button
                 type="button"
-                className="bg-[#FB2E86] text-white px-4 py-2 rounded-sm"
+                className="bg-[#FB2E86] text-white font-medium px-4 py-2 rounded-sm"
               >
                 Contact us
               </button>
@@ -95,16 +101,20 @@ export default function About() {
                   key={offer.id}
                   className="bg-white shadow-lg rounded-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
                 >
-                  <img
-                    className="mx-auto text-4xl mb-4"
+                  <Image
+                    className="mx-auto text-4xl mb-4 pt-10"
                     src={offer.icon}
                     alt={offer.icon}
-                  />
+                    // layout="fill"
+                    width={60}
+                    height={60}
+                    // objectFit="contain"
+                  ></Image>
 
-                  <h3 className="text-xl font-semibold text-indigo-900 mb-2">
+                  <h3 className="josefin-sans text-xl font-semibold text-[#151875] mb-2">
                     {offer.title}
                   </h3>
-                  <p className="text-gray-600">{offer.description}</p>
+                  <p className="text-[#1A0B5B4D] font-medium">{offer.description}</p>
                 </div>
               ))}
             </div>
@@ -120,21 +130,37 @@ export default function About() {
             </div>  
             <div className="flex justify-center space-x-4 mt-4">
                 
-              <img
+              <Image
+
                 className="h-12 w-12 rounded-full"
                 src="textimonial-1.svg"
                 alt="Client 1"
-              />  
-              <img
+                // layout="fill"
+                width={300}
+                height={300}
+                sizes="20%"
+                // objectFit="cover"
+              ></Image>
+              <Image
                 className="h-12 w-12 rounded-full"
                 src="textimonial-2.svg"
                 alt="Client 2"
-              />  
-              <img
+                // layout="fill"
+                width={300}
+                height={300}
+                sizes="20%"
+                // objectFit="cover"
+              ></Image>  
+              <Image
                 className="h-12 w-12 rounded-full"
                 src="textimonial-3.svg"
                 alt="Client 3"
-              />  
+                // layout="fill"
+                width={300}
+                height={300}
+                sizes="20%"
+                // objectFit="cover"
+              ></Image>  
             </div>  
             <div className="text-center mt-4">
                 

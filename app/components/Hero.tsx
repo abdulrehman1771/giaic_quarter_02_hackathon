@@ -4,8 +4,8 @@ export default function Hero() {
     <>
       <div className="w-full bg-[#F2F0FF]">
         <div className="flex flex-col w-[95%] mx-auto max-w-[1900px]">
-          <div className="flex">
-            <div className="hidden sm:flex sm:flex-col">
+          <div className="flex justify-center">
+            <div className="hidden md:flex md:flex-col">
               <div>
                 <Image
                   src="/lamp-hero.png"
@@ -34,7 +34,7 @@ export default function Hero() {
                 <button title="button" type="button" className=" px-9 py-3  bg-[#FB2E86]">Shop Now</button>
               </div>
             </div>
-            <div className="hidden sm:flex sm:items-center">
+            <div className="hidden md:flex md:items-center">
               <Image
                 className="mt-5"
                 src="/sofa-hero.png"

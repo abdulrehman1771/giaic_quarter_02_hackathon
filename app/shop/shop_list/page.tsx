@@ -119,12 +119,13 @@ export default function shopList() {
                   className="flex lg:flex-row flex-col gap-6 p-3 shadow-lg shadow-[#F6F6FD80] items-center"
                 >
                   <div className="flex relative justify-center items-center w-full md:flex-col lg:flex-row lg:w-[350px] h-60 bg-black">
-                    <div className="">
+                    <div className="relative w-full h-full">
                       <Image
                         className=""
                         src={tmp.image}
                         objectFit="cover"
                         layout="fill"
+                        sizes="100%"
                         alt={tmp.image}
                       ></Image>
                     </div>

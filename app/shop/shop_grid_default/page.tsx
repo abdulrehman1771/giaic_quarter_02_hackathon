@@ -10,7 +10,10 @@ interface IPhoto {
   photo: string;
 }
 
-export default function shopGridDefault() {
+
+
+export default async function shopGridDefault() {
+
   const photoDetails: IPhoto[] = [
     {
       id: 1,
@@ -97,6 +100,8 @@ export default function shopGridDefault() {
       photo: "/gridPhoto12.png",
     },
   ];
+
+
 
   return (
     <>
