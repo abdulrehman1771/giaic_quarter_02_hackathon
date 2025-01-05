@@ -86,7 +86,7 @@ export default function Navbar() {
               <Link href={"/shop/shop_list"}>Products</Link>
             </div>
             <div className="hover:text-[#FB2E86]">
-              <Link href={""}>Blog</Link>
+              <Link href={"/blog"}>Blog</Link>
             </div>
             <div className="hover:text-[#FB2E86]">
               <Link href={"/shop"}>Shop</Link>
@@ -143,7 +143,7 @@ export default function Navbar() {
                   <Link href="/shop/shop_list">Products</Link>
                 </div>
                 <div className="">
-                  <Link href="">Blog</Link>
+                  <Link href="/blog">Blog</Link>
                 </div>
                 <div className="">
                   <Link href="/shop">Shop</Link>

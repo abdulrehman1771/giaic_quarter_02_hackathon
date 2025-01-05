@@ -57,7 +57,7 @@ export default function About() {
 
         <div className="w-[90%] max-w-[1400px] mx-auto">
           <div className="overflow-hidden flex items-center mt-48">
-            <div className="relative w-1/2 h-96 rounded-xl">
+            <div className="relative w-1/2 h-96">
               <Image
                 src="/about-img.jpeg"
                 alt="Business Meeting"
