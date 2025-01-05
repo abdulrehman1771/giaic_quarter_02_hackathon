@@ -82,6 +82,7 @@ export default async function Blog() {
                 return (
                   <div className="mb-5 w-full flex flex-col" key={id}>
                     <div className="w-full">
+                      <Link href={`/blog/${id}`}>
                       <Image
                         className="w-full object-cover rounded-xl"
                         src={tmp.image}
@@ -91,7 +92,8 @@ export default async function Blog() {
                         // layout="fill"
                         sizes="100%"
                         alt={tmp.title}
-                      ></Image>
+                        ></Image>
+                        </Link>
                     </div>
                     <div className="h-11 flex gap-5 my-5">
                       <div className="flex gap-2 items-center">
@@ -113,7 +115,9 @@ export default async function Blog() {
                     </div>
                     <div className="mb-10">
                       <h1 className="josefin-sans font-bold text-[#151875] text-3xl mb-4">
+                        <Link href={`/blog/${id}`}>
                         {tmp.title}
+                        </Link>
                       </h1>
                       <p className="text-[#8A8FB9] mb-4">{tmp.description}</p>
                       <button
