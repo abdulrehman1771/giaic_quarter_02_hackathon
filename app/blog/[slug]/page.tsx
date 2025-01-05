@@ -39,7 +39,7 @@ interface IBlogProduct {
 import BlogSideBar from "@/app/components/BlogSideBar";
 
 export default function BlogPage({ params }: { params: { slug: number } }) {
-  let { slug } = params;
+  const { slug } = params;
   console.log(slug);
 
   const previewVideo: IPreviewVideo[] = [
