@@ -1,4 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
+
+
 export default function Hero() {
   return (
     <>
@@ -31,7 +34,9 @@ export default function Hero() {
                 </p>
               </div>
               <div className="items-center self-center scale-75 md:scale-100 md:self-auto justify-center font-medium mt-8 text-xl text-white josefin-sans">
+                <Link href={"/shop/shop_list"}>
                 <button title="button" type="button" className=" px-9 py-3  bg-[#FB2E86]">Shop Now</button>
+                </Link>
               </div>
             </div>
             <div className="hidden md:flex md:items-center">

@@ -2,56 +2,66 @@ import Image from "next/image";
 import { LuShoppingCart } from "react-icons/lu";
 import { FaRegHeart } from "react-icons/fa6";
 import { FiZoomIn } from "react-icons/fi";
+import { client } from "@/sanity/lib/client";
 
-const FeaturedProducts = () => {
-  const products = [
-    {
-      id: 1,
-      image: "/image-1168.svg",
-      name: "Cantilever chair",
-      code: "Y523201",
-      price: "$42.00",
-    },
-    {
-      id: 2,
-      image: "/image-1.svg",
-      name: "Cantilever chair",
-      code: "Y523201",
-      price: "$42.00",
-      isFeatured: true,
-    },
-    {
-      id: 3,
-      image: "/image-1169.svg",
-      name: "Cantilever chair",
-      code: "Y523201",
-      price: "$42.00",
-    },
-    {
-      id: 4,
-      image: "/image-3.svg",
-      name: "Cantilever chair",
-      code: "Y523201",
-      price: "$42.00",
-    },
-  ];
 
+export default async function FeaturedProducts ()  {
+  // const products = [
+  //   {
+  //     id: 1,
+  //     image: "/image-1168.svg",
+  //     name: "Cantilever chair",
+  //     code: "Y523201",
+  //     price: "$42.00",
+  //   },
+  //   {
+  //     id: 2,
+  //     image: "/image-1.svg",
+  //     name: "Cantilever chair",
+  //     code: "Y523201",
+  //     price: "$42.00",
+  //     isFeatured: true,
+  //   },
+  //   {
+  //     id: 3,
+  //     image: "/image-1169.svg",
+  //     name: "Cantilever chair",
+  //     code: "Y523201",
+  //     price: "$42.00",
+  //   },
+  //   {
+  //     id: 4,
+  //     image: "/image-3.svg",
+  //     name: "Cantilever chair",
+  //     code: "Y523201",
+  //     price: "$42.00",
+  //   },
+  // ];
+
+  const featureProd = await client.fetch('*[_type == "product"][2..5]{_id,name, "imageUrl": image.asset->url, name, price}')
+  
+  // console.log(featureProd)
+  
   return (
+     
+
     <>
       <div className="w-full">
         <div className="py-16 w-[95%] mx-auto max-w-[1900px]">
           <h2 className="text-4xl font-extrabold text-center mb-8 text-[#1A0B5B]">
             Featured Products
           </h2>
-          <div className="flex flex-col w-full md:flex-row justify-center items-center gap-6">
-            {products.map((product) => (
+          <div className="grid grid-cols-4 max-w-[1400px] mx-auto md:grid-flow-row justify-center items-center gap-6">
+            {
+              featureProd?
+              (featureProd.map((product:{_id:string,imageUrl:string,name:string,isFeatured:boolean,price:string,code:string}) => (
               <div
-                key={product.id}
-                className={`relative w-full md:w-64 border rounded-lg shadow-md`}
+                key={product._id}
+                className={`relative w-full h-[500px] md:w-64 border rounded-lg shadow-md`}
               >
                 <div className="w-full flex items-center justify-center bg-[#F7F7F7] h-72 object-cover rounded-t-lg">
                   <Image
-                    src={product.image}
+                    src={product.imageUrl}
                     alt={product.name}
                     width={200}
                     height={200}
@@ -104,14 +114,16 @@ const FeaturedProducts = () => {
                     </span>
                   </p>
                   <p className="text-xl font-bold mt-2">{product.price}</p>
-                  {product.isFeatured && (
+                  {/* {product.isFeatured && (
                     <button className="mt-4 bg-green-500 text-white py-1 px-3 rounded">
                       View Details
                     </button>
-                  )}
+                  )} */}
                 </div>
               </div>
-            ))}
+            )))
+            : ""
+          }
           </div>
           <div className="flex item justify-center mt-6">
             <div className="w-6 h-2 bg-pink-500 rounded-full mx-1"></div>
@@ -125,4 +137,3 @@ const FeaturedProducts = () => {
   );
 };
 
-export default FeaturedProducts;

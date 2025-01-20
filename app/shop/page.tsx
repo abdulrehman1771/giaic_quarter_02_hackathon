@@ -36,7 +36,7 @@ export default async function shop() {
         <div className="w-[90%] leading-10 mx-auto max-w-[1400px] py-14">
             <h2>Click Below Links:</h2>
             <Link href="/shop/shop_grid_default" className="josefin-sans font-bold underline text-[#151875] text-2xl "> Shop Grid Default</Link><br /><br />
-            <Link href="/shop/shop_list" className="josefin-sans font-bold underline text-[#151875] text-2xl "> Shop Grid Default</Link>
+            <Link href="/shop/shop_list" className="josefin-sans font-bold underline text-[#151875] text-2xl "> Shop List</Link>
         </div>
       </div>
     </>

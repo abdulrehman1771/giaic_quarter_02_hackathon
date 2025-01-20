@@ -1,51 +1,57 @@
-const LatestProducts = () => {
-  const products = [
-    {
-      id: 1,
-      image: "/image-1166.svg",
-      name: "Comfort Handy Craft",
-      price: "$42.00",
-      oldPrice: "$65.00",
-      isNew: true,
-    },
-    {
-      id: 2,
-      image: "/image-15.svg",
-      name: "Comfort Handy Craft",
-      price: "$42.00",
-      oldPrice: "$65.00",
-      isOnSale: true,
-    },
-    {
-      id: 3,
-      image: "/image-1160.svg",
-      name: "Comfort Handy Craft",
-      price: "$42.00",
-      oldPrice: "$65.00",
-    },
-    {
-      id: 4,
-      image: "/image-23.svg",
-      name: "Comfort Handy Craft",
-      price: "$42.00",
-      oldPrice: "$65.00",
-    },
-    {
-      id: 5,
-      image: "/image-32.svg",
-      name: "Comfort Handy Craft",
-      price: "$42.00",
-      oldPrice: "$65.00",
-    },
-    {
-      id: 6,
-      image: "/image-2.svg",
-      name: "Comfort Handy Craft",
-      price: "$42.00",
-      oldPrice: "$65.00",
-    },
-  ];
+import { client } from "@/sanity/lib/client";
+import Image from "next/image";
 
+
+const LatestProducts = async () => {
+  // const products = [
+  //   {
+  //     id: 1,
+  //     image: "/image-1166.svg",
+  //     name: "Comfort Handy Craft",
+  //     price: "$42.00",
+  //     oldPrice: "$65.00",
+  //     isNew: true,
+  //   },
+  //   {
+  //     id: 2,
+  //     image: "/image-15.svg",
+  //     name: "Comfort Handy Craft",
+  //     price: "$42.00",
+  //     oldPrice: "$65.00",
+  //     isOnSale: true,
+  //   },
+  //   {
+  //     id: 3,
+  //     image: "/image-1160.svg",
+  //     name: "Comfort Handy Craft",
+  //     price: "$42.00",
+  //     oldPrice: "$65.00",
+  //   },
+  //   {
+  //     id: 4,
+  //     image: "/image-23.svg",
+  //     name: "Comfort Handy Craft",
+  //     price: "$42.00",
+  //     oldPrice: "$65.00",
+  //   },
+  //   {
+  //     id: 5,
+  //     image: "/image-32.svg",
+  //     name: "Comfort Handy Craft",
+  //     price: "$42.00",
+  //     oldPrice: "$65.00",
+  //   },
+  //   {
+  //     id: 6,
+  //     image: "/image-2.svg",
+  //     name: "Comfort Handy Craft",
+  //     price: "$42.00",
+  //     oldPrice: "$65.00",
+  //   },
+  // ];
+
+const prod = await client.fetch('*[_type == "product"][6..11]{_id,name, "imageUrl": image.asset->url, name, price, discountPercentage}')
+  // console.log(prod)
   return (
     <>
       <div className="w-full">
@@ -71,16 +77,20 @@ const LatestProducts = () => {
               </button>
             </div>
             <div className="grid grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {products.map((product) => (
+              {prod.map((product) => (
                 <div
-                  key={product.id}
+                  key={product._id}
                   className="relative bg-white rounded-lg overflow-hidden"
                 >
-                  <img
-                    src={product.image}
+                  <Image
+                    src={product.imageUrl}
                     alt={product.name}
+                    width={20}
+                    height={20}
+                    sizes="100%"
                     className="bg-[#F7F7F7] w-full h-64 object-cover"
-                  />
+                  >
+                    </Image>
                   {product.isNew}
                   {product.isOnSale && (
                     <span className="absolute top-3 right-3 bg-blue-500 text-white text-xs font-semibold py-1 px-3 rounded-full">
@@ -93,10 +103,10 @@ const LatestProducts = () => {
                     </h3>
                     <div className="flex justify-center space-x-2 my-2">
                       <span className="text-pink-500 font-bold">
-                        {product.price}
+                        ${product.price}
                       </span>
                       <span className="text-gray-500 line-through">
-                        {product.oldPrice}
+                        ${product.discountPercentage}
                       </span>
                     </div>
                     <div className="flex justify-center space-x-2 mt-4"></div>

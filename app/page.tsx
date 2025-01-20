@@ -8,7 +8,7 @@ import DiscountItem from "./components/DiscountedItem";
 import TopCategories from "./components/TopCategories";
 import LatestBlog from "./components/LatestBlog";
 
-export default function Home() {
+export default async function Home() {
   
   
   
@@ -16,8 +16,9 @@ export default function Home() {
     <>
       <Hero />
 
-      <FeaturedProducts />
-      <LatestProducts />
+      {await FeaturedProducts()}
+      {await LatestProducts()}
+      {/* <LatestProducts /> */}
       <ShopexOffer />
 
       <div className="w-full bg-[#F1F0FF]">
