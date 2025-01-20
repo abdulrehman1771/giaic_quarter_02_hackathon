@@ -77,7 +77,7 @@ const prod = await client.fetch('*[_type == "product"][6..11]{_id,name, "imageUr
               </button>
             </div>
             <div className="grid grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {prod.map((product) => (
+              {prod.map((product:{_id:string,imageUrl:string,name:string,isNew:boolean,isOnSale:boolean,price:number,discountPercentage:number}) => (
                 <div
                   key={product._id}
                   className="relative bg-white rounded-lg overflow-hidden"
