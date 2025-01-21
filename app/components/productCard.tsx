@@ -7,13 +7,30 @@ import { RiInstagramFill } from "react-icons/ri";
 import { FaTwitter } from "react-icons/fa";
 import { IList } from "../shop/shop_list/page";
 
-export default function Card({data}:{data}) {   
+export default function Card({data}:{data:IList[]}) {   
   const product:IList = data[0]
-    console.log(data.length)
+
   return (
     <>
-      <div className="w-full p-10 flex shadow-md gap-5">
-        <div className="w-[45%] grid grid-cols-3 grid-rows-3 gap-2">
+      <div className="w-full p-10 flex flex-col lg:flex-row shadow-md gap-5 justify-center">
+        <div className="lg:w-[50%] grid grid-col-3 lg:grid-cols-4 grid-rows-3 lg:grid-rows-3 gap-2">
+        <div className="relative bg-slate-100 w-full row-span-2 lg:row-span-3 col-span-3">
+          {
+                product.imageUrl?
+              <Link href={`${product.imageUrl}`} className="">
+              <Image
+                src={`${product.imageUrl}`}
+                className=""
+                // width={100}
+                // height={100}
+                // layout="responsive"
+                fill
+                alt={product.name}
+                ></Image>
+            </Link>
+            :""
+              }
+          </div>
           <div className="bg-slate-100 w-full h-40 relative">
             {
                 product.imageUrl?
@@ -31,23 +48,7 @@ export default function Card({data}:{data}) {
             :""
               }
           </div>
-          <div className="relative bg-slate-100 w-full row-span-3 col-span-2">
-          {
-                product.imageUrl?
-              <Link href={`${product.imageUrl}`} className="">
-              <Image
-                src={`${product.imageUrl}`}
-                className=""
-                // width={100}
-                // height={100}
-                // layout="responsive"
-                fill
-                alt={product.name}
-                ></Image>
-            </Link>
-            :""
-              }
-          </div>
+          
           <div className="relative bg-slate-100 w- h-40">
           {
                 product.imageUrl?
@@ -83,7 +84,7 @@ export default function Card({data}:{data}) {
               }
           </div>
         </div>
-        <div className="w-[55%] my-auto">
+        <div className="lg:w-[50%] my-auto">
           <h1 className="josefin-sans font-semibold text-[#0D134E] text-4xl">
             {product.name}
           </h1>

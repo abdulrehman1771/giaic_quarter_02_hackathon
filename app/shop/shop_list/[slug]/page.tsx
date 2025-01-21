@@ -6,7 +6,9 @@ import {IList} from "../page"
 
 export default async function ProductDetails({params}:{params:{slug:number}}) {
   const { slug } = params;
-  const product:IList = await client.fetch(`*[_type == "product" && _id == "${slug}"]{_id,name, "imageUrl": image.asset->url, price, discountPercentage, stockLevel, description}`)
+  const products:IList[] = await client.fetch(`*[_type == "product" && _id == "${slug}"]{_id,name, "imageUrl": image.asset->url, price, discountPercentage, stockLevel, description}`)
+
+  const product = products[0]
   // const products:IList[] = [product]
   // console.log(slug)
   // console.log(product)
@@ -35,7 +37,7 @@ export default async function ProductDetails({params}:{params:{slug:number}}) {
       <div className="w-full">
         <div className="w-[90%] max-w-[1400px] mx-auto">
           <div className="my-40">
-            <Card data={product}/>
+            <Card data={products}/>
           </div>
         </div>
         <div className="my-40 py-20 bg-[#F9F8FE]">
