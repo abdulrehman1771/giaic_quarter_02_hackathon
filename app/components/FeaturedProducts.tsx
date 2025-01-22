@@ -51,13 +51,13 @@ export default async function FeaturedProducts ()  {
           <h2 className="text-4xl font-extrabold text-center mb-8 text-[#1A0B5B]">
             Featured Products
           </h2>
-          <div className="grid grid-cols-4 max-w-[1400px] mx-auto md:grid-flow-row justify-center items-center gap-6">
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-[1400px] mx-auto  justify-center items-center gap-6">
             {
               featureProd?
               (featureProd.map((product:{_id:string,imageUrl:string,name:string,isFeatured:boolean,price:string,code:string}) => (
               <div
                 key={product._id}
-                className={`relative w-full h-[500px] md:w-64 border rounded-lg shadow-md`}
+                className={`relative w-full h-[500px] border rounded-lg shadow-md`}
               >
                 <div className="w-full flex items-center justify-center bg-[#F7F7F7] h-72 object-cover rounded-t-lg">
                   <Image
