@@ -72,7 +72,7 @@ export default async function Home() {
         </div>
       </div>
 
-      <TrendingProducts />
+      {await TrendingProducts()}
       <DiscountItem />
       <TopCategories />
 
