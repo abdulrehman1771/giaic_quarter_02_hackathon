@@ -20,7 +20,7 @@ export default function Card({data}:{data:IList[]}) {
               <Link href={`${product.imageUrl}`} className="">
               <Image
                 src={`${product.imageUrl}`}
-                className=""
+                className="object-contain"
                 // width={100}
                 // height={100}
                 // layout="responsive"
@@ -37,7 +37,7 @@ export default function Card({data}:{data:IList[]}) {
               <Link href={`${product.imageUrl}`} className="">
               <Image
                 src={`${product.imageUrl}`}
-                className=""
+                className="object-contain"
                 // width={100}
                 // height={100}
                 // layout="responsive"
@@ -55,7 +55,7 @@ export default function Card({data}:{data:IList[]}) {
               <Link href={`${product.imageUrl}`} className="">
               <Image
                 src={`${product.imageUrl}`}
-                className=""
+                className="object-contain"
                 // width={100}
                 // height={100}
                 // layout="responsive"
@@ -72,7 +72,7 @@ export default function Card({data}:{data:IList[]}) {
               <Link href={`${product.imageUrl}`} className="">
               <Image
                 src={`${product.imageUrl}`}
-                className=""
+                className="object-contain"
                 // width={100}
                 // height={100}
                 // layout="responsive"

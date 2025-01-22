@@ -3,6 +3,7 @@ import { LuShoppingCart } from "react-icons/lu";
 import { FaRegHeart } from "react-icons/fa6";
 import { FiZoomIn } from "react-icons/fi";
 import { client } from "@/sanity/lib/client";
+import Link from "next/link";
 
 
 export default async function FeaturedProducts ()  {
@@ -55,6 +56,8 @@ export default async function FeaturedProducts ()  {
             {
               featureProd?
               (featureProd.map((product:{_id:string,imageUrl:string,name:string,isFeatured:boolean,price:string,code:string}) => (
+                <>
+                <Link href={`/shop/shop_list/${product._id}`}>
               <div
                 key={product._id}
                 className={`relative w-full h-[500px] border rounded-lg shadow-md`}
@@ -65,7 +68,7 @@ export default async function FeaturedProducts ()  {
                     alt={product.name}
                     width={200}
                     height={200}
-                    // className="mx-auto pt-1/2 pb-1/2"
+                    className="object-contain"
                   ></Image>
                 </div>
                 {product.isFeatured && (
@@ -121,6 +124,10 @@ export default async function FeaturedProducts ()  {
                   )} */}
                 </div>
               </div>
+              </Link>
+
+              </>
+
             )))
             : ""
           }

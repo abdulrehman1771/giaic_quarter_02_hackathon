@@ -1,6 +1,6 @@
 import { client } from "@/sanity/lib/client";
 import Image from "next/image";
-
+import Link from "next/link";
 
 const LatestProducts = async () => {
   // const products = [
@@ -50,7 +50,9 @@ const LatestProducts = async () => {
   //   },
   // ];
 
-const prod = await client.fetch('*[_type == "product"][6..11]{_id,name, "imageUrl": image.asset->url, name, price, discountPercentage}')
+  const prod = await client.fetch(
+    '*[_type == "product"][6..11]{_id,name, "imageUrl": image.asset->url, name, price, discountPercentage}'
+  );
   // console.log(prod)
   return (
     <>
@@ -77,42 +79,55 @@ const prod = await client.fetch('*[_type == "product"][6..11]{_id,name, "imageUr
               </button>
             </div>
             <div className="grid grid-col-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {prod.map((product:{_id:string,imageUrl:string,name:string,isNew:boolean,isOnSale:boolean,price:number,discountPercentage:number}) => (
-                <div
-                  key={product._id}
-                  className="w-full relative bg-white rounded-lg overflow-hidden"
-                >
-                  <Image
-                    src={product.imageUrl}
-                    alt={product.name}
-                    width={20}
-                    height={20}
-                    sizes="100%"
-                    className="bg-[#F7F7F7] w-full h-64 object-cover"
-                  >
-                    </Image>
-                  {product.isNew}
-                  {product.isOnSale && (
-                    <span className="absolute top-3 right-3 bg-blue-500 text-white text-xs font-semibold py-1 px-3 rounded-full">
-                      Sale
-                    </span>
-                  )}
-                  <div className="flex gap-5 p-4 items-center justify-between text-center">
-                    <h3 className="font-medium border-b-2 text-lg text-gray-800">
-                      {product.name}
-                    </h3>
-                    <div className="flex justify-center space-x-2 my-2">
-                      <span className="text-pink-500 font-bold">
-                        ${product.price}
-                      </span>
-                      <span className="text-gray-500 line-through">
-                        ${product.discountPercentage}
-                      </span>
-                    </div>
-                    <div className="flex justify-center space-x-2 mt-4"></div>
-                  </div>
-                </div>
-              ))}
+              {prod.map(
+                (product: {
+                  _id: string;
+                  imageUrl: string;
+                  name: string;
+                  isNew: boolean;
+                  isOnSale: boolean;
+                  price: number;
+                  discountPercentage: number;
+                }) => (
+                  <>
+                    <Link href={`/shop/shop_list/${product._id}`}>
+                      <div
+                        key={product._id}
+                        className="w-full relative bg-white rounded-lg overflow-hidden"
+                      >
+                        <Image
+                          src={product.imageUrl}
+                          alt={product.name}
+                          width={20}
+                          height={20}
+                          sizes="100%"
+                          className="bg-[#F7F7F7] w-full h-96 object-contain"
+                        ></Image>
+                        {product.isNew}
+                        {product.isOnSale && (
+                          <span className="absolute top-3 right-3 bg-blue-500 text-white text-xs font-semibold py-1 px-3 rounded-full">
+                            Sale
+                          </span>
+                        )}
+                        <div className="flex gap-5 p-4 items-center justify-between text-center">
+                          <h3 className="font-medium border-b-2 text-lg text-gray-800">
+                            {product.name}
+                          </h3>
+                          <div className="flex justify-center space-x-2 my-2">
+                            <span className="text-pink-500 font-bold">
+                              ${product.price}
+                            </span>
+                            <span className="text-gray-500 line-through">
+                              ${product.discountPercentage}
+                            </span>
+                          </div>
+                          <div className="flex justify-center space-x-2 mt-4"></div>
+                        </div>
+                      </div>
+                    </Link>
+                  </>
+                )
+              )}
             </div>
           </div>
         </div>

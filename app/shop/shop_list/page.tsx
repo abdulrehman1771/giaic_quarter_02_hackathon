@@ -135,7 +135,7 @@ export default async function shopList() {
                     <div className="relative w-full h-full">
                       <Link href={`/shop/shop_list/${tmp._id}`}>
                         <Image
-                          className="object-fill"
+                          className="object-contain"
                           fill
                           src={tmp.imageUrl}
                           alt={tmp.name}
