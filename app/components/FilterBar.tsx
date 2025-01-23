@@ -1,5 +1,6 @@
 import { HiViewGrid } from "react-icons/hi";
 import { FaList } from "react-icons/fa";
+import Link from "next/link";
 
 
 export default function FilterBar(props:{head:string}) {
@@ -44,10 +45,14 @@ export default function FilterBar(props:{head:string}) {
             <div className="flex items-center gap-1">
               <h2>View:</h2>
               <button type="button" title="button">
+                <Link href={`/shop/shop_grid_default`}>
                 <HiViewGrid />
+                </Link>
               </button>
               <button type="button" title="button">
+                <Link href={`/shop/shop_list`}>
                 <FaList />
+                </Link>
               </button>
             </div>
             <input
