@@ -23,7 +23,7 @@ export interface iProduct {
     description?: string;
   
     /** Discount percentage, must be between 0 and 100 */
-    discountPercentage?: number;
+    discountPercentage: number;
   
     /** Whether the product is a featured product */
     isFeaturedProduct?: boolean;
@@ -33,5 +33,12 @@ export interface iProduct {
   
     /** The category of the product (e.g., 'Chair', 'Sofa') */
     category: 'Chair' | 'Sofa';
+    _id: string;
+    // name: string;
+    imageUrl: string;
+    // price: number;
+    // discountPercentage: number;
+    // stockLevel: number;
+    // description: string;
   }
   
