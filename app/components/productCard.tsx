@@ -34,7 +34,7 @@ export default function Card({ data }: { data: iProduct[] }) {
     syncCart(); // Update UI state
     setIsAdding(false);
 
-    console.log('Added to cart:', product);
+    // console.log('Added to cart:', product);
   };
 
 
@@ -55,7 +55,7 @@ export default function Card({ data }: { data: iProduct[] }) {
           )}
         </div>
         {[1, 2, 3].map((_, index) => (
-          <div key={index} className="relative bg-slate-100 w-full h-40">
+          <div key={index} className="relative bg-slate-100 w-full">
             {product.imageUrl && (
               <Image
                 src={product.imageUrl}

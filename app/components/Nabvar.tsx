@@ -59,7 +59,7 @@ export default function Navbar() {
               </Link>
             </div>
             <div className="flex items-center sm:gap-1">
-              <Link className="flex items-center gsm:ap-1" href={"/"}>
+              <Link className="flex items-center gsm:ap-1" href={"/shopping_cart"}>
                 <LuShoppingCart />
               </Link>
             </div>

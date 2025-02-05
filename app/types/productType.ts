@@ -34,6 +34,7 @@ export interface iProduct {
     /** The category of the product (e.g., 'Chair', 'Sofa') */
     category: 'Chair' | 'Sofa';
     _id: string;
+    id:string;
     // name: string;
     imageUrl: string;
     // price: number;
