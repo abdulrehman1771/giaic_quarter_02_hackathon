@@ -2,7 +2,7 @@ import Link from "next/link";
 import Card from "../../../components/productCard";
 import { HiArrowLongRight } from "react-icons/hi2";
 import { client } from "@/sanity/lib/client";
-import { IList } from "../page";
+import { iProduct } from "@/app/types/productType";
 
 export default async function ProductDetails({
   params,
@@ -10,7 +10,7 @@ export default async function ProductDetails({
   params: { slug: number };
 }) {
   const { slug } = params;
-  const products: IList[] = await client.fetch(
+  const products: iProduct[] = await client.fetch(
     `*[_type == "product" && _id == "${slug}"]{_id,name, "imageUrl": image.asset->url, price, discountPercentage, stockLevel, description}`
   );
 

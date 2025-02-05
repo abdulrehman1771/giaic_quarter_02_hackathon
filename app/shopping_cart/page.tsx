@@ -14,7 +14,7 @@ const ShoppingCart = () => {
     syncCart(); // Updates the context state with the new cart
   };
 
-
+  
   const handleRemoveItem = (itemId: string) => {
     // console.log("Removing Item ID:", itemId); // Debug log
     removeFromCart(itemId);
