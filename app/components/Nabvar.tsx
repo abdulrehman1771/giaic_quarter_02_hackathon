@@ -11,8 +11,15 @@ import { FiSearch } from "react-icons/fi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import { MdClose } from "react-icons/md";
+import { useCartContext } from "../providers/cart-provider";
 
 export default function Navbar() {
+
+  
+  const {totalItems} = useCartContext();
+
+
+
   const [sideBar, setSideBar] = useState(true);
 
   const toggleSideBar = () => {
@@ -58,9 +65,14 @@ export default function Navbar() {
                 <FaRegHeart />
               </Link>
             </div>
-            <div className="flex items-center sm:gap-1">
-              <Link className="flex items-center gsm:ap-1" href={"/shopping_cart"}>
-                <LuShoppingCart />
+            <div className="flex items-center relative sm:gap-1">
+              <Link className="flex items-center sm:gap-1 scale-50 md:scale-75" href={"/shopping_cart"}>
+                <LuShoppingCart size={30}/> 
+                {totalItems > 0 && (
+                <div className="w-5 h-5 rounded-full flex justify-center items-center bg-[#FB2E86] absolute top-[-5px] right-[-5px]">
+                  <p className="text-white text-sm">{totalItems}</p>
+                </div>
+              )}
               </Link>
             </div>
           </div>
