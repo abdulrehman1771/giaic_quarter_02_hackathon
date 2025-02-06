@@ -177,7 +177,16 @@ const ShoppingCart = () => {
                   </div>
                   <div className="flex justify-between border-b-2 py-4 text-lg text-[#1D3178]">
                     <h3 className="font-semibold">Totals:</h3>
-                    <h3 className="font-medium">$325.00</h3>
+                    <h3 className="font-medium">
+                      $
+                      {cartItems
+                        .reduce((total, item) => {
+                          const price = Number(item.price);
+                          const quantity = item.quantity || 1;
+                          return total + price * quantity;
+                        }, 0)
+                        .toFixed(2)}
+                    </h3>
                     {/* You can update this to calculate any extra fees or shipping */}
                   </div>
                   <div className="flex gap-3 py-5 items-center">
